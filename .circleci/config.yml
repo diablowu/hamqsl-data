@@ -12,6 +12,7 @@ jobs: # basic units of work in a run
           name: Get HF
           command: |
             pwd
+            mkdir -p  /tmp/test-results
             curl https://www.hamqsl.com/solarrss.php > /tmp/test-results/solar.xml
             cat /tmp/test-results/solar.xml
 
