@@ -13,7 +13,7 @@ jobs: # basic units of work in a run
           command: |
             pwd
             mkdir -p  /tmp/test-results
-            curl https://www.hamqsl.com/solarrss.php > /tmp/test-results/solar.xml
+            wget https://www.hamqsl.com/solarrss.php -O /tmp/test-results/solar.xml
             cat /tmp/test-results/solar.xml
 
       - store_artifacts: # upload test summary for display in Artifacts
